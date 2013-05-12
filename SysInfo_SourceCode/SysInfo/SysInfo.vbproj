@@ -1,0 +1,475 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6D83FB17-BE0E-4AE1-9F04-3BAB0A96B45F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SysInfo.My.MyApplication</StartupObject>
+    <RootNamespace>SysInfo</RootNamespace>
+    <AssemblyName>SysInfo</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>On</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <ApplicationIcon>Resources\classic.ico</ApplicationIcon>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>SysInfo.snk</AssemblyOriginatorKeyFile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>4B0145CDF3DF2B42AF6D5B8EE84B2F4652CAD3D3</ManifestCertificateThumbprint>
+    <ManifestKeyFile>SysInfo_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>false</GenerateManifests>
+    <TargetZone>LocalIntranet</TargetZone>
+    <SignManifests>false</SignManifests>
+    <PublishUrl>D:\CodeProject - SysInfo\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SysInfo.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <RemoveIntegerChecks>true</RemoveIntegerChecks>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>None</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SysInfo.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <RemoveIntegerChecks>true</RemoveIntegerChecks>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Windows" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Windows.Forms.VisualStyles" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Classes\Divider.Designer.vb">
+      <DependentUpon>Divider.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Divider.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\Errors.vb" />
+    <Compile Include="Forms\FormLicense.Designer.vb">
+      <DependentUpon>FormLicense.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormLicense.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSplash.Designer.vb">
+      <DependentUpon>FormSplash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormSplash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMain.Designer.vb">
+      <DependentUpon>FormMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMsdn.Designer.vb">
+      <DependentUpon>FormMsdn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormMsdn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Misc.vb" />
+    <Compile Include="Classes\TextReport.vb" />
+    <Compile Include="User Controls\UserControlDevices.Designer.vb">
+      <DependentUpon>UserControlDevices.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\UserControlDevices.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\UserControlDrivers.Designer.vb">
+      <DependentUpon>UserControlDrivers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\UserControlDrivers.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\UserControlEnvironmentVariables.Designer.vb">
+      <DependentUpon>UserControlEnvironmentVariables.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\UserControlEnvironmentVariables.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\UserControlHome.Designer.vb">
+      <DependentUpon>UserControlHome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\UserControlHome.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\UserControlMemory.Designer.vb">
+      <DependentUpon>UserControlMemory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\UserControlMemory.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\UserControlNetwork.Designer.vb">
+      <DependentUpon>UserControlNetwork.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\UserControlNetwork.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\UserControlOS.Designer.vb">
+      <DependentUpon>UserControlOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\UserControlOS.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\UserControlProcessor.Designer.vb">
+      <DependentUpon>UserControlProcessor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\UserControlProcessor.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\UserControlServices.Designer.vb">
+      <DependentUpon>UserControlServices.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\UserControlServices.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\UserControlSpecialFolders.Designer.vb">
+      <DependentUpon>UserControlSpecialFolders.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\UserControlSpecialFolders.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\UserControlStorage.Designer.vb">
+      <DependentUpon>UserControlStorage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\UserControlStorage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\UserControlSystem.Designer.vb">
+      <DependentUpon>UserControlSystem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\UserControlSystem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\UserControlVideo.Designer.vb">
+      <DependentUpon>UserControlVideo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\UserControlVideo.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\UserControlProcesses.Designer.vb">
+      <DependentUpon>UserControlProcesses.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\UserControlProcesses.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Classes\Wmi.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="User Controls\UserControlDetailed.designer.vb">
+      <DependentUpon>UserControlDetailed.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\UserControlDetailed.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\FormLicense.resx">
+      <DependentUpon>FormLicense.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormSplash.resx">
+      <DependentUpon>FormSplash.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMain.resx">
+      <DependentUpon>FormMain.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMsdn.resx">
+      <DependentUpon>FormMsdn.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\UserControlDevices.resx">
+      <DependentUpon>UserControlDevices.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\UserControlDrivers.resx">
+      <DependentUpon>UserControlDrivers.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\UserControlEnvironmentVariables.resx">
+      <DependentUpon>UserControlEnvironmentVariables.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\UserControlHome.resx">
+      <DependentUpon>UserControlHome.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\UserControlMemory.resx">
+      <DependentUpon>UserControlMemory.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\UserControlNetwork.resx">
+      <DependentUpon>UserControlNetwork.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\UserControlOS.resx">
+      <DependentUpon>UserControlOS.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\UserControlProcesses.resx">
+      <DependentUpon>UserControlProcesses.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\UserControlProcessor.resx">
+      <DependentUpon>UserControlProcessor.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\UserControlServices.resx">
+      <DependentUpon>UserControlServices.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\UserControlSpecialFolders.resx">
+      <DependentUpon>UserControlSpecialFolders.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\UserControlStorage.resx">
+      <DependentUpon>UserControlStorage.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\UserControlSystem.resx">
+      <DependentUpon>UserControlSystem.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\UserControlDetailed.resx">
+      <DependentUpon>UserControlDetailed.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\UserControlVideo.resx">
+      <DependentUpon>UserControlVideo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Windows 7 Logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Windows XP Logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Intel Logo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\classic.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\win7 logo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\windows_2000_logo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\windows-vista-logo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\windows-xp-logo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="Resources\Windows 2003 logo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AMD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AmiBios.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\200px-Phoenix-technologies-logo.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insyde.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Network Connection Router.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Network Connection Internet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Registered User.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\install.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\107.jpg" />
+    <None Include="SysInfo.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Display.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computer-monitor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graphics card.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\DataSources\SysInfo.Wmi.Service.datasource" />
+    <None Include="Resources\Devices.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Memory Modules.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Processes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Services.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folders.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Variables.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\Network.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hard-drive-icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CD-Drive.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HardDrive.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\USB.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\driver.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpu.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

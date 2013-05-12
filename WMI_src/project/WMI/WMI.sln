@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WMI", "WMIApplication\WMI.csproj", "{7A531A74-48F8-4845-BAFF-B2352CDD734F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WMIControlLibrary", "WMIControlLibrary\WMIControlLibrary.csproj", "{9D778089-8716-4F61-8B3B-50457CCC9583}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A531A74-48F8-4845-BAFF-B2352CDD734F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A531A74-48F8-4845-BAFF-B2352CDD734F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A531A74-48F8-4845-BAFF-B2352CDD734F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A531A74-48F8-4845-BAFF-B2352CDD734F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D778089-8716-4F61-8B3B-50457CCC9583}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D778089-8716-4F61-8B3B-50457CCC9583}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D778089-8716-4F61-8B3B-50457CCC9583}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D778089-8716-4F61-8B3B-50457CCC9583}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
